@@ -419,17 +419,6 @@ select:focus {
   background: linear-gradient(180deg, #ffffff 0%, #f7f3ed 100%);
   border: 1px solid #cfc3b4;
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.09);
-  position: relative;
-}
-
-.chooser-card::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto 0;
-  height: 4px;
-  background: var(--primary);
-  border-top-left-radius: var(--radius);
-  border-top-right-radius: var(--radius);
 }
 
 .chooser-card:hover {
