@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Can I Tow This Travel Trailer? | TowCalc.net</title>
+  <meta name="description" content="Check whether your truck can realistically handle a travel trailer based on payload, tow rating, passengers, cargo, hitch weight, and estimated tongue weight." />
+  /assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo">TowCalc<span>.net</span></a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../fifth-wheel-calculator/index.html">Fifth Wheel</a>
+        <a href="./index.html">Travel Trailer</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-section">
+    <div class="container">
+      <section class="page-intro">
+        <p class="eyebrow">Travel trailer towing calculator</p>
+        <h1>Can I Tow This Travel Trailer?</h1>
+        <p class="hero-copy">
+          Enter the key numbers from your truck sticker and trailer specs to get a fast reality check. This calculator focuses on the two limits that matter most for many travel-trailer owners: payload and tow rating.
+        </p>
+      </section>
+
+      <div class="page-grid">
+        <section class="panel">
+          <h2>Your setup</h2>
+          <p class="helper">
+            Keep it simple. If you are unsure on trailer weight, using the trailer GVWR is the safer planning number.
+          </p>
+
+          <div class="form-grid" id="calc-form">
+            <div class="field">
+              abel for="payload">Truck payload sticker (lbs)</label>
+              <input type="number" id="payload" value="1800" min="0" step="1" />
+              <div class="helper">Use the yellow door-sticker payload number.</div>
+            </div>
+
+            <div class="field">
+              abel for="towRating">Truck tow rating (lbs)</label>
+              <input type="number" id="towRating" value="10000" min="0" step="1" />
+              <div class="helper">Use your truck’s rated trailer tow limit.</div>
+            </div>
+
+            <div class="field">
+              abel for="trailerWeight">Trailer loaded weight or GVWR (lbs)</label>
+              <input type="number" id="trailerWeight" value="7000" min="0" step="1" />
+              <div class="helper">GVWR is safer if you don’t know your true loaded weight.</div>
+            </div>
+
+            <div class="field">
+              abel for="tonguePercent">Estimated tongue weight (%)</label>
+              <input type="number" id="tonguePercent" value="12.5" min="10" max="15" step="0.5" />
+              <div class="helper">10% to 15% is a common planning range for many travel trailers.</div>
+            </div>
+
+            <div class="field">
+              abel for="hitchWeight">Weight-distribution hitch / hitch hardware (lbs)</label>
+              <input type="number" id="hitchWeight" value="100" min="0" step="1" />
+            </div>
+
+            <div class="field">
+              abel for="passengerWeight">Passengers total (lbs)</label>
+              <input type="number" id="passengerWeight" value="350" min="0" step="1" />
+            </div>
+
+            <div class="field">
+              abel for="cargoWeight">Truck bed cargo / gear (lbs)</label>
+              <input type="number" id="cargoWeight" value="150" min="0" step="1" />
+              <div class="helper">Coolers, tools, generators, pets, firewood, and bed cargo all count.</div>
+            </div>
+
+            <div class="field">
+              abel for="safetyMargin">Safety margin (%)</label>
+              <input type="number" id="safetyMargin" value="10" min="0" max="25" step="1" />
+              <div class="helper">This gives you some cushion below your max numbers.</div>
+            </div>
+          </div>
+
+          <ul class="mini-listst">
+            >Tongue weight still uses truck payload, just like people and cargo.</l/li>
+            >Too little tongue weight can also create handling problems, so balance matters.</l/li>
+            >This tool is a planning check, not a substitute for real scale weights.</li>
+          </ul>
+        </section>
+
+        <aside class="panel result-panel">
+          <h2>Result</h2>
+
+          <div id="statusBadge" class="result-status status-warn">Borderline</div>
+          <h3 class="result-headline" id="resultHeadline">Close call</h3>
+          <p class="result-summary" id="summaryText">
+            Your setup is right on the edge. Payload appears to be the limiting factor.
+          </p>
+
+          <div class="result-list">
+            <div class="result-item">
+              <div class="result-label">Estimated tongue weight</div>
+              <div class="result-value" id="tongueWeightResult">875 lbs</div>
+            </div>
+
+            <div class="result-item">
+              <div class="result-label">Payload left for tongue weight</div>
+              <div class="result-value" id="payloadLeftResult">1,200 lbs</div>
+            </div>
+
+            <div class="result-item">
+              <div class="result-label">Payload difference</div>
+              <div class="result-value" id="payloadDiffResult">325 lbs</div>
+            </div>
+
+            <div class="result-item">
+              <div class="result-label">Tow rating difference</div>
+              <div class="result-value" id="towDiffResult">3,000 lbs</div>
+            </div>
+          </div>
+
+          <div class="result-explainer">
+            <strong id="constraintLabel">What is limiting you</strong>
+            <span id="constraintText">Payload appears to be the tighter limit on this setup.</span>
+          </div>
+
+          <p class="note">
+            Planning estimate only. Your actual scale weights, tire limits, axle limits, manufacturer ratings, and legal requirements still control.
+          </p>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <script src="../assets/js/travel-trailer.js"></script>
+</body>
+</html>
