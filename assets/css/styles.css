@@ -410,3 +410,26 @@ select:focus {
     text-align: center;
   }
 }
+.chooser-grid {
+  margin-top: 1.5rem;
+}
+
+.chooser-card {
+  min-height: 170px;
+}
+
+.chooser-card strong {
+  font-size: 1.15rem;
+  color: var(--text);
+}
+
+.chooser-card span {
+  display: block;
+  line-height: 1.5;
+}
+
+@media (max-width: 800px) {
+  .chooser-card {
+    min-height: auto;
+  }
+}
