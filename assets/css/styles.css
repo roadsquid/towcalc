@@ -420,13 +420,13 @@ select:focus {
   border: 1px solid #cfc3b4;
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.09);
   cursor: pointer;
-  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  transition: box-shadow 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
 }
 
 .chooser-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
   border-color: var(--primary);
-  box-shadow: 0 20px 44px rgba(13, 107, 111, 0.14);
+  box-shadow: 0 18px 38px rgba(13, 107, 111, 0.12);
 }
 
 .chooser-card:focus-visible {
@@ -439,12 +439,11 @@ select:focus {
   font-size: 1.15rem;
   color: var(--text);
   margin-bottom: 0.65rem;
-  transition: transform 0.18s ease, color 0.18s ease;
+  transition: color 0.18s ease;
 }
 
 .chooser-card:hover strong {
   color: var(--primary-dark);
-  transform: translateX(2px);
 }
 
 .chooser-card span {
@@ -459,10 +458,6 @@ select:focus {
   }
 
   .chooser-card:hover {
-    transform: none;
-  }
-
-  .chooser-card:hover strong {
     transform: none;
   }
 }
