@@ -33,7 +33,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: var(--text);
-  background: red !important;
+  background: var(--bg);
   line-height: 1.5;
 }
 
