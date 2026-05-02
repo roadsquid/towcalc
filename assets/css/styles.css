@@ -539,3 +539,22 @@ select:focus {
     justify-content: flex-start;
   }
 }
+
+.legal-page {
+  display: grid;
+  gap: 1rem;
+}
+
+.legal-page h2 {
+  margin-top: 1rem;
+  font-size: 1.15rem;
+}
+
+.legal-page p {
+  margin: 0;
+}
+
+.legal-page a {
+  color: var(--primary);
+  font-weight: 600;
+}
