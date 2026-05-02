@@ -471,9 +471,9 @@ select:focus {
 
 .footer-inner {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 1.25rem;
   padding-bottom: 1.5rem;
 }
 
@@ -501,104 +501,7 @@ select:focus {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem 1.25rem;
-  justify-content: flex-end;
-}
-
-.footer-links a {
-  color: var(--muted);
-  font-weight: 600;
-}
-
-.footer-links a:hover {
-  color: var(--primary);
-}
-
-.footer-bottom {
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--border);
-  display: flex;
-  justify-content: space-between;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.footer-bottom p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.88rem;
-  max-width: 700px;
-}
-
-@media (max-width: 800px) {
-  .footer-inner,
-  .footer-bottom {
-    flex-direction: column;
-  }
-
-  .footer-links {
-    justify-content: flex-start;
-  }
-}
-
-.legal-page {
-  display: grid;
-  gap: 1rem;
-}
-
-.legal-page h2 {
-  margin-top: 1rem;
-  font-size: 1.15rem;
-}
-
-.legal-page p {
-  margin: 0;
-}
-
-.legal-page a {
-  color: var(--primary);
-  font-weight: 600;
-}
-
-.page-intro {
-  margin-bottom: 1.5rem;
-}
-
-.page-intro h1 {
-  margin: 0;
-  max-width: none;
-  font-size: clamp(2rem, 4vw, 3.25rem);
-  line-height: 1.08;
-}
-
-.panel.legal-page {
-  padding: 1.5rem;
-}
-
-.legal-page {
-  display: grid;
-  gap: 1rem;
-}
-
-.legal-page h2 {
-  margin: 1rem 0 0.25rem;
-  font-size: 1.15rem;
-  line-height: 1.2;
-}
-
-.legal-page p {
-  margin: 0;
-  max-width: none;
-}
-
-.legal-page a {
-  color: var(--primary);
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.legal-page a:hover,
-.legal-page a:focus-visible {
-  text-decoration: underline;
+  justify-content: flex-start;
 }
 
 .footer-links a,
@@ -612,4 +515,25 @@ select:focus {
 .footer-links a:focus-visible {
   color: var(--primary);
   text-decoration: none;
+}
+
+.footer-bottom {
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem 2rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  max-width: none;
+}
+
+@media (max-width: 800px) {
+  .footer-bottom {
+    grid-template-columns: 1fr;
+  }
 }
